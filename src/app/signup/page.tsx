@@ -32,7 +32,11 @@ export default function SignupPage() {
   };
 
   useEffect(() => {
-    if (user.email.length > 0 && user.password.length > 0) {
+    if (
+      user.email.length > 0 &&
+      user.password.length > 0 &&
+      user.username.length > 0
+    ) {
       setButtonDisabled(false);
     } else {
       setButtonDisabled(true);
